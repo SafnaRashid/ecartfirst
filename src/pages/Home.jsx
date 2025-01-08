@@ -21,7 +21,7 @@ const Home = () => {
           loading ?
           <div className='flex justify-center items-center my-5 text-lg'>
             <img width={'70pc'} height={'70px'}src="https://media.tenor.com/khzZ7-YSJW4AAAAM/cargando.gif" alt="" />
-           Loading
+           Loading....
           </div>
           :
        <>
