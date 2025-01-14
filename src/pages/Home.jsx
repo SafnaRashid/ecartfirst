@@ -48,7 +48,7 @@ const Home = () => {
           {
             allProducts?.length>0 ?
             visibleAllProducts?.map(product=>(
-          <div className='rounded border p-2 shadow'>
+          <div key={product?.id} className='rounded border p-2 shadow'>
             <img width={'100%'} height={'200px'} src={product?.thumbnail} alt="" />
             <div className='text-center'>
               <h3 className='text-xl font-bold'>{product?.title}</h3>
@@ -58,7 +58,7 @@ const Home = () => {
               ))
           :
           <div className='flex justify-center items-center font-bold text-red-600 my-5 text-lg'>
-                  Prodduct not found
+                  Prodduct not found!!!
           </div>
          }
 
@@ -66,7 +66,7 @@ const Home = () => {
         <div className='text-2xl text-center font-bold mt-20'>
        <span onClick={navigateToPrevPage} className='cursor-pointer'><i className='fa-solid fa-backward me-5'></i></span>
        <span>{currentPage} of {totalPages}</span>
-       <span onClick={navigateToNextPage}className='cursor-pointer'><i className='fa-solid fa-forward ms-5'></i></span>
+       <span onClick={navigateToNextPage} className='cursor-pointer'><i className='fa-solid fa-forward ms-5'></i></span>
         </div>
         </>
         }
